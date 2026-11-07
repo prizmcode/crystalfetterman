@@ -23,7 +23,7 @@ async function submit() {
 <template>
   <div class="mx-auto max-w-xl">
     <h1 class="text-4xl font-medium tracking-tight">Contact</h1>
-    <p class="mt-3 text-ink/60">Have a website or design project in mind? Tell me about it.</p>
+    <p class="mt-3 text-ink/60">Hiring, or have a project in mind? I’d love to hear from you.</p>
 
     <p v-if="status === 'sent'" class="mt-10 rounded-sm bg-ink/5 p-6">Thank you! I'll get back to you soon.</p>
 

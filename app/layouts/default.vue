@@ -6,7 +6,7 @@ const nav = [
 ];
 
 useHead({
-  titleTemplate: (title) => (title ? `${title} | Prizm Studio` : 'Prizm Studio | Web Development & Graphic Design'),
+  titleTemplate: (title) => (title ? `${title} | Crystal Fetterman` : 'Crystal Fetterman | Web Developer & Designer'),
 });
 </script>
 
@@ -14,7 +14,7 @@ useHead({
   <div class="flex min-h-screen flex-col">
     <header>
       <nav class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-6 sm:px-6">
-        <NuxtLink to="/" class="text-lg font-medium tracking-tight">Prizm Studio</NuxtLink>
+        <NuxtLink to="/" class="text-lg font-medium tracking-tight">Crystal Fetterman</NuxtLink>
         <ul class="flex gap-6 text-sm">
           <li v-for="item in nav" :key="item.to">
             <NuxtLink :to="item.to" class="hover:text-accent" active-class="text-accent">{{ item.label }}</NuxtLink>
@@ -29,7 +29,7 @@ useHead({
 
     <footer>
       <div class="mx-auto flex max-w-6xl flex-wrap justify-between gap-4 px-4 py-10 text-sm text-ink/50 sm:px-6">
-        <span>&copy; {{ new Date().getFullYear() }} Prizm Studio, LLC</span>
+        <span>&copy; {{ new Date().getFullYear() }} Crystal Fetterman</span>
         <NuxtLink to="/contact" class="hover:text-accent">Get in touch</NuxtLink>
       </div>
     </footer>

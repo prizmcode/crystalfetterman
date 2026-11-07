@@ -21,8 +21,9 @@ defineProps<{ project: Project }>();
     </div>
     <div class="mt-4 flex items-baseline justify-between gap-4">
       <h3 class="font-medium group-hover:text-accent">{{ project.title }}</h3>
-      <span class="text-sm text-ink/50">{{ project.year }}</span>
+      <span v-if="project.year" class="text-sm text-ink/50">{{ project.year }}</span>
     </div>
     <p class="mt-1 text-sm text-ink/60">{{ project.categories.join(' · ') }}</p>
+    <p v-if="project.award" class="mt-1 text-sm text-accent">Award: {{ project.award }}</p>
   </NuxtLink>
 </template>

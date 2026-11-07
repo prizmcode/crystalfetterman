@@ -7,25 +7,26 @@ const featured = projects.slice(0, 4);
 <template>
   <div>
     <section class="max-w-3xl py-12 sm:py-20">
-      <h1 class="text-4xl font-medium leading-tight tracking-tight sm:text-6xl">Websites and design, made with care.</h1>
+      <h1 class="text-4xl font-medium leading-tight tracking-tight sm:text-6xl">Web developer and designer.</h1>
       <p class="mt-6 text-lg text-ink/70">
-        Prizm Studio is a small web development and graphic design studio in Bremerton, Washington, building clean, fast websites and the
-        visual identities that go with them.
+        I'm Crystal Fetterman, a web developer and designer in Bremerton, Washington. I build modern front ends in Nuxt and Vue, custom
+        WordPress and e-commerce sites, and the APIs and databases behind them, with 15+ years of experience from agency work to running
+        my own studio, Prizm Studio.
       </p>
       <div class="mt-10 flex gap-6 text-sm">
-        <NuxtLink to="/work" class="rounded-sm bg-ink px-6 py-3 text-paper hover:bg-accent">See the work</NuxtLink>
-        <NuxtLink to="/contact" class="py-3 underline underline-offset-4 hover:text-accent">Start a project</NuxtLink>
+        <NuxtLink to="/work" class="rounded-sm bg-ink px-6 py-3 text-paper hover:bg-accent">See my work</NuxtLink>
+        <NuxtLink to="/contact" class="py-3 underline underline-offset-4 hover:text-accent">Get in touch</NuxtLink>
       </div>
     </section>
 
     <section class="grid gap-10 border-t border-ink/10 py-16 sm:grid-cols-2">
       <div>
         <h2 class="text-xl font-medium">Web development</h2>
-        <p class="mt-3 text-ink/70">Custom websites and online stores built with Nuxt, Vue, WordPress and Tailwind: fast, accessible and easy to update.</p>
+        <p class="mt-3 text-ink/70">Websites, online stores and web apps built with Nuxt, Vue, WordPress, WooCommerce and Tailwind, plus the APIs and databases (GraphQL, PostgreSQL, Prisma, MySQL) that power them.</p>
       </div>
       <div>
         <h2 class="text-xl font-medium">Graphic design</h2>
-        <p class="mt-3 text-ink/70">Logos, brand identities and print pieces that give your business a clear, consistent look.</p>
+        <p class="mt-3 text-ink/70">Logos, brand identities, print pieces and HTML email campaigns, designed in Adobe InDesign, Affinity and Canva.</p>
       </div>
     </section>
 

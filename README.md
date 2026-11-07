@@ -1,6 +1,6 @@
-# Prizm Studio (Nuxt)
+# Crystal Fetterman (Nuxt)
 
-The prizmstudio.com site: Nuxt 4 on the front end, with WordPress used headless (through WPGraphQL) for the About page content. This site has no store. The WooCommerce shop lives on liliesofthefield.co.
+The crystalfetterman.com portfolio site, built with Nuxt 4. The contact form posts to the Prizm Studio WordPress site. This site has no store. The WooCommerce shop lives on liliesofthefield.co.
 
 ## Setup
 
@@ -15,8 +15,7 @@ npm run dev
 ## Where content lives
 
 - **Portfolio:** `app/data/projects.ts`. Add an entry there and put its images in `public/images/work/`.
-- **About:** the "About Prizm Studio" page in WordPress, fetched with `app/queries/getPage.gql`.
-- **Home and contact copy:** directly in `app/pages/`.
+- **Home, about and contact copy:** directly in `app/pages/`.
 - **Contact form:** posts to `/wp-json/prizm/v1/contact` on WordPress (the `prizm-contact.php` mu-plugin in the `prizm-studio-wp-content` repo), which emails each message through WP Mail SMTP.
 
 ## Deploying
