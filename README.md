@@ -15,6 +15,7 @@ Set `NUXT_PUBLIC_CONTACT_ENDPOINT` in `.env` to the URL the contact form posts t
 ## Where content lives
 
 - **Portfolio:** `app/data/projects.ts`. Add an entry there and put its images in `public/images/work/`.
+- **Resume:** `app/data/resume.ts` feeds the Resume page and the home page highlights. Keep it in step with the PDF resume.
 - **Home, about and contact copy:** directly in `app/pages/`.
 
 ## Deploying
