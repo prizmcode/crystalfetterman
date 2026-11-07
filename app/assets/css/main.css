@@ -3,9 +3,22 @@
 
 @theme {
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Playfair Display', ui-serif, Georgia, serif;
   --color-ink: #1c1b1a;
   --color-paper: #faf9f7;
-  --color-accent: #6b4fbb;
+  --color-accent: var(--color-forest-600);
+
+  --color-forest-50: oklch(0.975 0.008 158);
+  --color-forest-100: oklch(0.945 0.016 158);
+  --color-forest-200: oklch(0.89 0.026 158);
+  --color-forest-300: oklch(0.81 0.038 158);
+  --color-forest-400: oklch(0.68 0.048 158);
+  --color-forest-500: oklch(0.56 0.05 158);
+  --color-forest-600: oklch(0.47 0.045 158);
+  --color-forest-700: oklch(0.4 0.04 158);
+  --color-forest-800: oklch(0.34 0.033 158);
+  --color-forest-900: #1e2d24;
+  --color-forest-950: oklch(0.2 0.02 158);
 }
 
 body {

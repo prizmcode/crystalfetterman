@@ -15,7 +15,7 @@ useHead({
   <div class="flex min-h-screen flex-col">
     <header>
       <nav class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-3 px-4 py-6 sm:px-6">
-        <NuxtLink to="/" class="text-lg font-medium tracking-tight">Crystal Fetterman</NuxtLink>
+        <NuxtLink to="/" class="font-display text-2xl font-medium tracking-tight hover:text-accent">Crystal Fetterman</NuxtLink>
         <ul class="flex flex-wrap gap-x-5 gap-y-2 text-sm sm:gap-x-6">
           <li v-for="item in nav" :key="item.to">
             <NuxtLink :to="item.to" class="hover:text-accent" active-class="text-accent">{{ item.label }}</NuxtLink>
