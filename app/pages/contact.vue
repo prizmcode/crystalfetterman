@@ -1,17 +1,22 @@
 <script setup lang="ts">
 useHead({ title: 'Contact' });
 
-const { wpOrigin } = useRuntimeConfig().public;
+const { contactEndpoint } = useRuntimeConfig().public;
 
 const form = reactive({ name: '', email: '', message: '', company: '' });
 const status = ref<'idle' | 'sending' | 'sent' | 'error'>('idle');
 const errorMessage = ref('');
 
-// Submissions go to WordPress (prizm-contact mu-plugin), which emails them through WP Mail SMTP.
+// Posts to the endpoint set in NUXT_PUBLIC_CONTACT_ENDPOINT, which emails each message.
 async function submit() {
+  if (!contactEndpoint) {
+    errorMessage.value = 'The contact form is not set up yet.';
+    status.value = 'error';
+    return;
+  }
   status.value = 'sending';
   try {
-    await $fetch(`${wpOrigin}/wp-json/prizm/v1/contact`, { method: 'POST', body: form });
+    await $fetch(contactEndpoint, { method: 'POST', body: form });
     status.value = 'sent';
   } catch (err: any) {
     errorMessage.value = err?.data?.message || 'Something went wrong. Please try again.';

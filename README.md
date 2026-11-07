@@ -1,6 +1,6 @@
 # Crystal Fetterman (Nuxt)
 
-The crystalfetterman.com portfolio site, built with Nuxt 4. The contact form posts to the Prizm Studio WordPress site. This site has no store. The WooCommerce shop lives on liliesofthefield.co.
+The crystalfetterman.com portfolio site, built with Nuxt 4 and Tailwind CSS.
 
 ## Setup
 
@@ -10,16 +10,15 @@ npm install
 npm run dev
 ```
 
-`GQL_HOST` points at the WordPress GraphQL endpoint. It is `https://prizmstudio.com/graphql` for now and changes to `https://cms.prizmstudio.com/graphql` when WordPress moves to the subdomain at launch.
+Set `NUXT_PUBLIC_CONTACT_ENDPOINT` in `.env` to the URL the contact form posts to. It receives a JSON body with `name`, `email`, `message` and a hidden `company` field (a spam trap that should be empty).
 
 ## Where content lives
 
 - **Portfolio:** `app/data/projects.ts`. Add an entry there and put its images in `public/images/work/`.
 - **Home, about and contact copy:** directly in `app/pages/`.
-- **Contact form:** posts to `/wp-json/prizm/v1/contact` on WordPress (the `prizm-contact.php` mu-plugin in the `prizm-studio-wp-content` repo), which emails each message through WP Mail SMTP.
 
 ## Deploying
 
-The site is static. `npm run generate` writes it to `.output/public/`, and `.github/workflows/deploy.yml` uploads that folder to Hostinger over FTP. The comments at the top of the workflow list the GitHub secrets and variables it needs. It deploys only when you start it by hand until the `DEPLOY_ON_PUSH` variable is set to `true`.
+The site is static. `npm run generate` writes it to `.output/public/`. Set `NUXT_PUBLIC_CONTACT_ENDPOINT` in the host's build settings so the contact form works.
 
-Because the pages are built ahead of time, changes to the About page in WordPress appear after the next deploy.
+`.github/workflows/deploy.yml` can also upload the build to Hostinger over FTP. The comments at the top list the secrets and variables it needs. It runs only when started by hand until `DEPLOY_ON_PUSH` is `true`.
